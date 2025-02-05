@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Todo Viewer - Boilerplate</title>
+  <!-- Tailwind CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-800">
+  <div class="container mx-auto p-4">
+    <h1 class="text-3xl font-bold text-center mb-4">Todo Viewer</h1>
+    
+    <!-- Filter Düymələri -->
+    <div class="flex justify-center mb-4">
+      <button id="allBtn" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded mr-2">Hamısını Göstər</button>
+      <button id="completedBtn" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded mr-2">Tamamlanmışları Göstər</button>
+      <button id="incompleteBtn" class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded">Tamamlanmamışları Göstər</button>
+    </div>
+    
+    <!-- Yüklənmə Mesajı -->
+    <div id="loading" class="text-center text-xl">Yüklənir...</div>
+    
+    <!-- Todo-ların Yerləşəcəyi Konteyner -->
+    <div id="todoContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+  </div>
+
+  <!-- JavaScript Bölməsi: Aşağıdakı təlimata uyğun olaraq JS kodunuzu burada yazın -->
+  <script>
+    /*
+    TAPŞIRIQ TƏLİMATI:
+    
+    1. DummyJSON Todos API-dən məlumatları çəkin:
+       - API URL: https://dummyjson.com/todos
+       - Fetch API və ya async/await istifadə edərək asinxron şəkildə məlumatları əldə edin.
+       
+    2. DOM-a məlumatların əlavə edilməsi:
+       - Hər bir todo üçün bir "kart" elementi yaradın və aşağıdakı məlumatları daxil edin:
+         a) ID
+         b) Todo mətn (todo sahəsi)
+         c) Tamamlanma vəziyyəti (tamamlanıb/tamamlanmayıb)
+         d) İstifadəçi ID (əgər varsa)
+       - Yaradılan kartları "todoContainer" identifikatoruna malik konteynerə əlavə edin.
+       
+    3. Filtrləmə funksionallığı:
+       - "Hamısını Göstər" düyməsinə basıldığında bütün todo-ları ekranda göstərin.
+       - "Tamamlanmışları Göstər" düyməsinə basıldığında yalnız completed = true olan todo-ları göstərsin. array filter metodu
+       - "Tamamlanmamışları Göstər" düyməsinə basıldığında yalnız completed = false olan todo-ları göstərsin. array filter metodu
+       
+    4. Yüklənmə Mesajı:
+       - Məlumatlar yüklənənə qədər "Yüklənir..." mesajını göstərməlisiniz.
+       - Məlumatlar tam yükləndikdən sonra bu mesajı gizlədin.
+       
+    5. Kodunuzu daha oxunaqlı etmək üçün:
+       - Kodunuzu funksiyalara bölün (məsələn, fetch funksiyası, render funksiyası və s.).
+       - Hər bir addımı şərhlərlə izah edin.
+       
+    Qeyd: Bu HTML faylını və JavaScript faylınl layihənizin başlanğıc nöqtəsi kimi istifadə edərək, yuxarıdakı təlimatlara uyğun JavaScript kodunuzu əlavə edin.
+    */
+  </script>
+</body>
+</html>
